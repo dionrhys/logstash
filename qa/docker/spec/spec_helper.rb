@@ -60,7 +60,6 @@ def get_logstash_status(container)
   JSON.parse(container.exec(['curl', '-s', 'http://localhost:9600'])[0][0])['status']
 end
 
-
 def get_node_info(container)
   JSON.parse(container.exec(['curl', '-s', 'http://localhost:9600/_node'])[0][0])
 end

@@ -6,9 +6,11 @@
 #
 # Example of two pipelines:
 #
-# - pipeline.id: test
+ - pipeline.id: test
+   path.config: '/d/users/robbavey/code/logstash/test.conf'
 #   pipeline.workers: 1
 #   pipeline.batch.size: 1
+#   config.string: 'input { stdin {}} filter {} output { stdout {}}'
 #   config.string: "input { generator {} } filter { sleep { time => 1 } } output { stdout { codec => dots } }"
 # - pipeline.id: another_test
 #   queue.type: persisted

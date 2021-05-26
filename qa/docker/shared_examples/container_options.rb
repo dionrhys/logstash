@@ -29,6 +29,8 @@ shared_examples_for 'it applies settings correctly' do |flavor|
     let(:options) { { 'ENV' => ['pipeline.batch.size=123'] } }
 
     it "should correctly set the batch size" do
+      puts "The value of pipelines:main is "
+      puts get_node_info(@container)['pipelines']['main']
       expect(get_node_info(@container)['pipelines']['main']['batch_size']).to eql 123
     end
   end
