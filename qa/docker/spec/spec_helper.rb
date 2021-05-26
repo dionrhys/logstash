@@ -6,6 +6,7 @@ require 'logstash/version'
 require 'json'
 require 'stud/try'
 require 'docker-api'
+require_relative '../patches/excon/unix_socket'
 
 def version
   @version ||= LOGSTASH_VERSION
